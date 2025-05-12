@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Website</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f4f7fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e293b;
+      color: white;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    nav {
+      flex: 1;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1em;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.75em 1em;
+      display: block;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #334155;
+    }
+
+    nav ul ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #334155;
+      display: none;
+      flex-direction: column;
+      min-width: 160px;
+      border-radius: 4px;
+    }
+
+    nav li:hover > ul {
+      display: flex;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1200x500') no-repeat center center/cover;
+      /*color: white;*/
+      text-align: center;
+      padding: 5em 1em;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.5em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .cta-button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #2563eb;
+    }
+
+    .features {
+      padding: 3em 1em;
+      background: #fff;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+
+    .feature-item {
+      background: #e2e8f0;
+      padding: 2em;
+      border-radius: 8px;
+      max-width: 300px;
+      flex: 1 1 250px;
+    }
+
+    .feature-item h3 {
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+    }
+
+    footer {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 1.5em 1em;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      margin: 0 0.5em;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background-color: #1e293b;
+      }
+
+      nav ul ul {
+        position: static;
+        flex-direction: column;
+      }
+
+      nav li:hover > ul {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">MySite</div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Features</a>
+          <ul>
+            <li><a href="#">Feature 1</a></li>
+            <li><a href="#">Feature 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Services</a>
+          <ul>
+            <li><a href="#">Consulting</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Build Your Dream Project</h1>
+    <p>Join thousands of others using our platform to grow their ideas.</p>
+    <button class="cta-button">Get Started</button>
+  </section>
+
+  <section class="features">
+    <h2>What We Offer</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>Easy Integration</h3>
+        <p>Plug into your existing workflow with minimal setup.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Powerful Tools</h3>
+        <p>Access a suite of tools designed to boost productivity.</p>
+      </div>
+      <div class="feature-item">
+        <h3>24/7 Support</h3>
+        <p>We’re here to help, anytime you need us.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MySite. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a>
+  </footer>
+</body>
+</html>
